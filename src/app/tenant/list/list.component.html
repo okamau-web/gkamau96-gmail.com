@@ -1,0 +1,33 @@
+<div >
+  <h3>Tenants List</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr class="table-primary">
+        <th scope="col">First Name</th>
+        <th scope="col">Other Names</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Property</th>
+        <th scope="col">Unit</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+      <tr *ngFor="let customer of (customers$ |async)">
+        <th scope="row">{{customer.firstName}}</th>
+        <td >{{customer.otherNames}}</td>
+        <td>{{customer.phone}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.property}}</td>
+        <td>{{customer.unit}}</td>
+        <th>
+        <span>  <a (click)=editCustomer(customer)>edit</a>
+          |
+          <a (click)=deleteCustomer(customer)>delete</a></span>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+  </div>

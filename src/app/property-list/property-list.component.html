@@ -1,0 +1,32 @@
+<h3>
+    Property List</h3>
+
+<div class="row mt-5" style="background-color:white;">
+
+    <div class="col-md-3 mb-3" *ngFor="let property of (properties$ | async) ">
+
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(3, 27, 1);">{{ property.name }}</h5>
+                <p class="card-text">{{ property.description }}</p>
+
+                <p class="card-text">Location: {{ property.location }}</p>
+                <p class="card-text">Price: {{ property.price }}</p>
+
+            </div>
+
+
+            <div class="card-footer text-muted">
+                <mat-card-actions>
+                    <button mat-button class="btn btn-outline-warning btn-sm">Like</button>
+                    <button mat-button (click)="viewUnits()" class="btn btn-outline-success btn-sm">View Units</button>
+                    <button mat-button (click)="editProperty(property)"  class="btn btn-danger btn-sm">edit</button>
+                    <button mat-button (click)="deleteProperty(property)" class="btn btn-danger btn-sm">Delete</button>
+
+                  </mat-card-actions>
+            </div>
+
+        </div>
+
+    </div>
+</div>

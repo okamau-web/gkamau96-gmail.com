@@ -1,0 +1,15 @@
+ {
+     "images": [{
+             "name": "ABCD",
+             "img": "../img/101 (10).jpg"
+         },
+         {
+             "name": "ABCDE",
+             "url": "../img/101 (11).jpg"
+         },
+         {
+             "name": "ABCDEF",
+             "url": "../img/101 (12).jpg"
+         }
+     ]
+ }

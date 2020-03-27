@@ -1,0 +1,72 @@
+{
+  "images": [
+    {}
+  ],
+  "facility": [
+    {
+      "name": "Breez Point Resort",
+      "description": "Residential Rooms",
+      "numberOfUnits": 200,
+      "location": "Malindi Town",
+      "price": 45000,
+      "ownership": "Shk Khalifa bin Sayeed",
+      "pic": "",
+      "id": 5
+    },
+    {
+      "name": "ABC Properties",
+      "description": "Executive office suits",
+      "numberOfUnits": 35,
+      "location": "Malindi Town",
+      "price": 50000,
+      "ownership": "G&G Investors",
+      "pic": "",
+      "id": 7
+    },
+    {
+      "name": "Malika Building",
+      "description": "Beach Residential Homes",
+      "numberOfUnits": 10,
+      "location": "Malindi Town",
+      "price": 12000,
+      "ownership": "Shk Khalifa bin Sayeed",
+      "pic": "",
+      "id": 8
+    },
+    {
+      "name": "Tahmeed House",
+      "description": "Offices",
+      "numberOfUnits": 12,
+      "location": "Nairobi ",
+      "price": 20000,
+      "ownership": "Saidi Abdalla",
+      "pic": "",
+      "id": 9
+    }
+  ],
+  "mpangaji": [
+    {
+      "firstName": "Onesmus",
+      "otherNames": "Mucheru Kamau",
+      "phone": "1234567890",
+      "address": "780 Thika",
+      "property": "Breeze Point",
+      "unit": "GC5",
+      "email": "kamau@malipo.solutions",
+      "terms": true,
+      "id": 4
+    },
+    {
+      "firstName": "P",
+      "otherNames": "Nyambura",
+      "phone": "0727511616",
+      "address": "780",
+      "property": "Breeze Point",
+      "unit": "F3",
+      "email": "p@p",
+      "terms": false,
+      "id": 5
+    }
+  ],
+  "tenant": []
+}

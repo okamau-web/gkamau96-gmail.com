@@ -1,0 +1,77 @@
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card-rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+      <div class="card-body">
+        <form #registerForm="ngForm">
+          <div class="form-group">
+            <label for="">Name</label>
+            <input [(ngModel)]="registerUserData.firstName" name="firstName" type="text" required #firstName="ngModel"
+              [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control rounded-0">
+            <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">
+              First Name is required</small>
+
+          </div>
+          <div class="form-group">
+            <label for="">Other Names</label>
+            <input [(ngModel)]="registerUserData.otherNames" name="otherNames" type="text" required
+              #otherNames="ngModel" [class.is-invalid]="otherNames.invalid && otherNames.touched"
+              class="form-control rounded-0">
+            <small class="text-danger" [class.d-none]="otherNames.valid || otherNames.untouched">
+              Please enter Other Names</small>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <select class="custom-select" required #role="ngModel" [class.is-invalid]="role.invalid && role.touched"
+              class="form-control" name="role" [(ngModel)]="registerUserData.role">
+              <option *ngFor="let role of roles ">{{role}}</option>
+            </select>
+            <small class="text-danger" [class.d-none]="role.valid || role.untouched">
+              Assign role </small>
+
+          </div>
+
+          <div class="form-group">
+            <label for="">User Name</label>
+            <input [(ngModel)]="registerUserData.username" name="username" type="text" required #username="ngModel"
+              [class.is-invalid]="username.invalid && username.touched" class="form-control rounded-0">
+            <small class="text-danger" [class.d-none]="username.valid || username.untouched">
+              Username is required</small>
+          </div>
+
+          <div class="form-group">
+            <label for="">Email</label>
+            <input [(ngModel)]="registerUserData.email" name="email" type="text" class="form-control rounded-0" required
+              #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched">
+              Email is required</small>
+
+          </div>
+
+
+          <div class="form-group">
+            <label for="">Phone</label>
+            <input [(ngModel)]="registerUserData.phone" name="phone" type="number" required #phone="ngModel"
+              [class.is-none]="phone.invalid && phone.touched" class="form-control rounded-0">
+            <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">
+              Phone number is required</small>
+          </div>
+
+          <div class="form-group">
+            <label for="">Password</label>
+            <input [(ngModel)]="registerUserData.password" name="password" type="password"
+              class="form-control rounded-0" required #password="ngModel"
+              [class.is-none]="password.invalid && password.touched" class="form-control">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">
+              Password is required</small>
+          </div>
+
+          <button [disabled]="registerForm.form.invalid" (click)="registerUser()" type="submit"
+            class="btn btn-primary float-right">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

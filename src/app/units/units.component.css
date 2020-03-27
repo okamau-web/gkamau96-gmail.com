@@ -1,0 +1,12 @@
+ .full-width-table {
+     width: 99%;
+     margin: 8px;
+     background-color: rgb(255, 147, 6);
+ }
+ 
+ .pagi {
+     width: 100%;
+     margin: 8px;
+     background-color: coral;
+     color: rgb(41, 39, 39);
+ }

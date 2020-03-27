@@ -1,0 +1,126 @@
+<div class="container-fluid">
+  <h3>Property Enrollment Form</h3>
+</div>
+<form #propertyForm="ngForm" (ngSubmit)="addProperty()" novalidate>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Property Name</label>
+      <input
+        type="text"
+        required
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+        class="form-control"
+        name="name"
+        [(ngModel)]="newProperty.name"
+      />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched"
+        >Property name is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Description</label>
+      <input
+        type="text"
+        required
+        #description="ngModel"
+        [class.is-invalid]="description.invalid && description.touched"
+        class="form-control"
+        name="description"
+        [(ngModel)]="newProperty.description"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="description.valid || description.untouched"
+        >Property description is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Location</label>
+      <input
+        type="text"
+        required
+        #location="ngModel"
+        [class.is-invalid]="location.invalid && location.touched"
+        class="form-control"
+        name="location"
+        [(ngModel)]="newProperty.location"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="location.valid || location.untouched"
+        >Property location is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Units</label>
+      <input
+        type="number"
+        required
+        #numberOfUnits="ngModel"
+        [class.is-invalid]="numberOfUnits.invalid && numberOfUnits.touched"
+        class="form-control"
+        name="numberOfUnits"
+        [(ngModel)]="newProperty.numberOfUnits"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="numberOfUnits.valid || numberOfUnits.untouched"
+        >Property number of Units is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Ownership</label>
+      <input
+        type="text"
+        required
+        #ownership="ngModel"
+        [class.is-invalid]="ownership.invalid && ownership.touched"
+        class="form-control"
+        name="ownership"
+        [(ngModel)]="newProperty.ownership"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="ownership.valid || ownership.untouched"
+        >Property Ownership is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Unit Price</label>
+      <input
+        type="number"
+        required
+        #price="ngModel"
+        [class.is-invalid]="price.invalid && price.touched"
+        class="form-control"
+        name="price"
+        [(ngModel)]="newProperty.price"
+      />
+      <small class="text-danger" [class.d-none]="price.valid || price.untouched"
+        >Property unit price is required</small
+      >
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button
+          [disabled]="propertyForm.form.invalid"
+          class="btn btn-primary "
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="container-fluid mat-elevation-z8">
+  <app-property-list></app-property-list>
+</div>
