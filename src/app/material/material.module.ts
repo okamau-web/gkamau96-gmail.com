@@ -9,7 +9,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { MatMenuModule } from '@angular/material/menu';
 const MaterialComponent = [
   MatListModule,
   MatInputModule,
@@ -22,7 +22,8 @@ const MaterialComponent = [
   MatBadgeModule,
   MatCardModule,
   MatDialogModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatMenuModule
 
 ];
 
@@ -39,8 +40,8 @@ const MaterialComponent = [
     MatCardModule,
     MatDialogModule,
     MatTooltipModule,
-    MatInputModule
-
+    MatInputModule,
+    MatMenuModule
 
   ],
   imports: [
@@ -55,6 +56,7 @@ const MaterialComponent = [
     MatCardModule,
     MatDialogModule,
     MatTooltipModule,
+    MatMenuModule,
     MatInputModule
   ]
 })

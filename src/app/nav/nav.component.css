@@ -3,5 +3,6 @@ body {
 }
 
 nav a {
-  color: goldenrod;
+  color: white;
+  background-color: #007bff;
 }

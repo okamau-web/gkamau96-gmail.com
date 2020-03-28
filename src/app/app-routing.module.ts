@@ -33,8 +33,9 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'editprop', component: EditPropertyComponent },
-  {path:'**',component:PagenotfoundComponent}
+  { path: 'farmers', loadChildren: () => import('./farmers/farmers.module').then(m => m.FarmersModule) },
 
+  {path:'**',component:PagenotfoundComponent},
 ];
 
 
