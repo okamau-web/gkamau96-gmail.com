@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
+
+
 const MaterialComponent = [
   MatListModule,
   MatInputModule,
@@ -23,7 +26,9 @@ const MaterialComponent = [
   MatCardModule,
   MatDialogModule,
   MatTooltipModule,
-  MatMenuModule
+  MatMenuModule,
+  FormsModule,
+  ReactiveFormsModule
 
 ];
 
@@ -41,8 +46,9 @@ const MaterialComponent = [
     MatDialogModule,
     MatTooltipModule,
     MatInputModule,
-    MatMenuModule
-
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   imports: [
     MatListModule,
@@ -57,7 +63,10 @@ const MaterialComponent = [
     MatDialogModule,
     MatTooltipModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
 export class MaterialModule { }

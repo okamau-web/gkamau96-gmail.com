@@ -1,3 +1,4 @@
+import { FarmersModule } from './farmers/farmers.module';
 import { TenantModule } from './tenant/tenant.module';
 import { TenantsService } from './tenant/tenants.service';
 
@@ -58,6 +59,7 @@ import { EditPropertyComponent } from './edit-property/edit-property.component';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FarmersService } from './farmers/farmers.service';
 
 @NgModule({
   declarations: [
@@ -91,9 +93,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     BrowserAnimationsModule,
     ChartsModule,
     MatCheckboxModule,
-    AppRoutingModule,
     EffectsModule.forRoot([PropertyEffect]),
-    StoreModule.forRoot({ properties: propertyReducer, auth: AuthReducer,}),
+    StoreModule.forRoot({ properties: propertyReducer, auth: AuthReducer, }),
 
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyDyNGdUKaJu574UitqUo1RKX6ly6NlKKeM' }),
     MatCardModule,
@@ -119,12 +120,16 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
     MatIconModule,
 
-    MatListModule
+    MatListModule,
+    FarmersModule,
+
+    AppRoutingModule,
   ],
   providers: [
     TenantsService,
     AuthService,
     AuthGuard,
+    FarmersService,
     EventService,
     {
       provide: HTTP_INTERCEPTORS,

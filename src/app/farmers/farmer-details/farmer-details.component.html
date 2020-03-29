@@ -1,1 +1,209 @@
-<p>farmer-details works!</p>
+<div class="container-fluid ">
+  <h3>Farmer Enrollment Form</h3>
+</div>
+<form #farmerForm="ngForm" (ngSubmit)="addFarmer()" novalidate>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Names</label>
+      <input
+        type="text"
+        required
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+        class="form-control"
+        name="name"
+        [(ngModel)]="newFarmer.name"
+      />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched"
+        >Property name is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Phone</label>
+      <input
+        type="text"
+        required
+        #phone="ngModel"
+        [class.is-invalid]="phone.invalid && phone.touched"
+        class="form-control"
+        name="phone"
+        [(ngModel)]="newFarmer.phone"
+      />
+      <small class="text-danger" [class.d-none]="phone.valid || phone.untouched"
+        >Property phone is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Birth Date</label>
+      <input
+        type="date"
+        required
+        #dateOfBirth="ngModel"
+        [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched"
+        class="form-control"
+        name=" dateOfBirth"
+        [(ngModel)]="newFarmer.dateOfBirth"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="dateOfBirth.valid || dateOfBirth.untouched"
+        >Birth Date is required</small
+      >
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Gender</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="gender"
+        required
+        #gender="ngModel"
+        [(ngModel)]="newFarmer.gender"
+      >
+        <option selected></option>
+        <option *ngFor="let type of genders">{{type}}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="gender.valid || gender.untouched"
+        >gender is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Geo Location</label>
+      <input
+        type="text"
+        required
+        #geoLocation="ngModel"
+        [class.is-invalid]="geoLocation.invalid && geoLocation.touched"
+        class="form-control"
+        name="geoLocation"
+        [(ngModel)]="newFarmer.geoLocation"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="geoLocation.valid || geoLocation.untouched"
+        >Geo Location is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Farm Size</label>
+      <input
+        type="number"
+        required
+        #sizeOfFarm="ngModel"
+        [class.is-invalid]="sizeOfFarm.invalid && sizeOfFarm.touched"
+        class="form-control"
+        name=" sizeOfFarm"
+        [(ngModel)]="newFarmer.sizeOfFarm"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="sizeOfFarm.valid || sizeOfFarm.untouched"
+      >
+        Farm Size is required</small
+      >
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Ward</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="ward"
+        required
+        #ward="ngModel"
+        [(ngModel)]="newFarmer.ward"
+      >
+        <option selected></option>
+        <option *ngFor="let ward of wards">{{ ward }}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="ward.valid || ward.untouched"
+        >Ward is required</small
+      >
+    </div>
+
+
+    <div class="col-md-4">
+      <label for="inputState">Sub County</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="subCounty"
+        required
+        #subCounty="ngModel"
+        [(ngModel)]="newFarmer.subCounty"
+      >
+        <option selected></option>
+        <option *ngFor="let sub of subCounties">{{ sub }}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="subCounty.valid || subCounty.untouched"
+        >Property sub county type is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>County</label>
+      <input
+        type="text"
+        required
+        #county="ngModel"
+        [class.is-invalid]="county.invalid && county.touched"
+        class="form-control"
+        name="county"
+        [(ngModel)]="newFarmer.county"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="county.valid || county.untouched"
+        >County is required</small
+      >
+    </div>
+
+
+    <div class="col-md-4">
+      <label for="inputState">Ownership</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="landOwnership"
+        required
+        #landOwnership="ngModel"
+        [(ngModel)]="newFarmer.landOwnership"
+      >
+        <option selected></option>
+        <option *ngFor="let owner of lands">{{ owner}}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="landOwnership.valid || landOwnership.untouched"
+        > Ownership type is required</small
+      >
+    </div>
+
+
+
+
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button
+          [disabled]="farmerForm.form.invalid"
+          class="btn btn-primary "
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

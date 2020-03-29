@@ -4,69 +4,65 @@
   ],
   "facility": [
     {
-      "name": "Breez Point Resort",
-      "description": "Residential Rooms",
+      "name": "Breez Point P",
+      "description": "Offices",
       "numberOfUnits": 200,
       "location": "Malindi Town",
       "price": 45000,
       "ownership": "Shk Khalifa bin Sayeed",
       "pic": "",
       "id": 5
-    },
-    {
-      "name": "ABC Properties",
-      "description": "Executive office suits",
-      "numberOfUnits": 35,
-      "location": "Malindi Town",
-      "price": 50000,
-      "ownership": "G&G Investors",
-      "pic": "",
-      "id": 7
-    },
-    {
-      "name": "Malika Building",
-      "description": "Beach Residential Homes",
-      "numberOfUnits": 10,
-      "location": "Malindi Town",
-      "price": 12000,
-      "ownership": "Shk Khalifa bin Sayeed",
-      "pic": "",
-      "id": 8
-    },
-    {
-      "name": "Tahmeed House",
-      "description": "Offices",
-      "numberOfUnits": 12,
-      "location": "Nairobi ",
-      "price": 20000,
-      "ownership": "Saidi Abdalla",
-      "pic": "",
-      "id": 9
     }
   ],
   "mpangaji": [
     {
       "firstName": "Onesmus",
       "otherNames": "Mucheru Kamau",
-      "phone": "1234567890",
-      "address": "780 Thika",
-      "property": "Breeze Point",
-      "unit": "GC5",
+      "phone": "0702640",
+      "address": "254 Thika",
+      "property": "ABC Apartments",
+      "unit": "SQ6",
       "email": "kamau@malipo.solutions",
       "terms": true,
-      "id": 4
+      "id": 1
     },
     {
-      "firstName": "P",
-      "otherNames": "Nyambura",
-      "phone": "0727511616",
-      "address": "780",
-      "property": "Breeze Point",
-      "unit": "F3",
-      "email": "p@p",
-      "terms": false,
-      "id": 5
+      "firstName": "Edward",
+      "otherNames": "N. Mwaurer",
+      "phone": "+2547021545",
+      "address": "237 thika",
+      "property": "Blessed House",
+      "unit": "BH408",
+      "email": "edward@malipo.solutions",
+      "terms": true,
+      "id": 2
+    },
+    {
+      "firstName": "dgshghd",
+      "otherNames": "fdnnkdff02555",
+      "phone": "2222",
+      "address": "52555",
+      "property": "Garden City",
+      "unit": "GC5",
+      "email": "ds#",
+      "terms": true,
+      "id": 3
     }
   ],
-  "tenant": []
+  "tenant": [],
+  "farmers": [
+    {
+      "name": "Onesmus Kamau",
+      "phone": "0702640433",
+      "dateOfBirth": "1900-02-05",
+      "gender": "Male",
+      "sizeOfFarm": 3,
+      "geoLocation": "2541313.55,668686.55",
+      "ward": "Githobokoni",
+      "subCounty": "Gatundu South",
+      "county": "Kiambu",
+      "landOwnership": "Fully Owned",
+      "id": 1
+    }
+  ]
 }

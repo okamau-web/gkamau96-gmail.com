@@ -15,9 +15,9 @@ import { Tenant } from '../tenant-model';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-   customerForm: FormGroup;
-propertys = ['Blessed House', 'Garden City', 'Breeze Point','ABC Apartments'];
- units = ['BH408', 'GC5', 'BP1', 'C7', 'F3', 'SQ6','V8', 'Q7'];
+  customerForm: FormGroup;
+  propertys = ['Blessed House', 'Garden City', 'Breeze Point', 'ABC Apartments'];
+  units = ['BH408', 'GC5', 'BP1', 'C7', 'F3', 'SQ6', 'V8', 'Q7'];
   constructor(
     private fb: FormBuilder,
     private store: Store<fromCustomer.AppState>,
@@ -32,8 +32,8 @@ propertys = ['Blessed House', 'Garden City', 'Breeze Point','ABC Apartments'];
       address: ['', Validators.required],
       property: ['', Validators.required],
       unit: ['', Validators.required],
-      terms:['', Validators.required],
-      email:['', Validators.required],
+      terms: ['', Validators.required],
+      email: ['', Validators.required],
       id: null
     });
 
@@ -49,8 +49,8 @@ propertys = ['Blessed House', 'Garden City', 'Breeze Point','ABC Apartments'];
           phone: currentCustomer.phone,
           address: currentCustomer.address,
           property: currentCustomer.property,
-         unit: currentCustomer.unit,
-         terms: currentCustomer.terms,
+          unit: currentCustomer.unit,
+          terms: currentCustomer.terms,
           id: currentCustomer.id,
           email: currentCustomer.email,
 
@@ -68,7 +68,7 @@ propertys = ['Blessed House', 'Garden City', 'Breeze Point','ABC Apartments'];
       property: this.customerForm.get('property').value,
       unit: this.customerForm.get('unit').value,
       id: this.customerForm.get('id').value,
-      email:this.customerForm.get('email').value,
+      email: this.customerForm.get('email').value,
       terms: this.customerForm.get('terms').value
     };
 

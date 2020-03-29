@@ -1,0 +1,40 @@
+<div>
+  <h3>Farmers List</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr class="table-primary">
+        <th scope="col">Names</th>
+        <th scope="col">B.Date</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Location</th>
+        <th scope="col">Land Size</th>
+        <th scope="col">Ownership</th>
+        <th scope="col">Ward</th>
+        <th scope="col">Sub County</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr></tr>
+      <tr *ngFor="let farmer of farmers$ | async">
+        <th>{{ farmer.name }}</th>
+        <td>{{ farmer.dateOfBirth }}</td>
+        <td>{{ farmer.gender}}</td>
+        <td>{{ farmer.phone }}</td>
+        <td>{{ farmer.geoLocation }}</td>
+        <td>{{ farmer.sizeOfFarm }}</td>
+        <td>{{ farmer.landOwnership }}</td>
+        <td>{{ farmer.ward}}</td>
+        <td>{{ farmer.subCounty}}</td>
+        <th>
+          <span>
+            <a (click)="editFarmer(farmer)">edit</a>
+            |
+            <a (click)="deleteFarmer(farmer)">delete</a></span
+          >
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
