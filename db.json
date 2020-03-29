@@ -4,8 +4,8 @@
   ],
   "facility": [
     {
-      "name": "Breez Point P",
-      "description": "Offices",
+      "name": "Breez Point Palace",
+      "description": "Resdential Homes",
       "numberOfUnits": 200,
       "location": "Malindi Town",
       "price": 45000,
@@ -56,7 +56,7 @@
       "phone": "0702640433",
       "dateOfBirth": "1900-02-05",
       "gender": "Male",
-      "sizeOfFarm": 3,
+      "sizeOfFarm": 1,
       "geoLocation": "2541313.55,668686.55",
       "ward": "Githobokoni",
       "subCounty": "Gatundu South",

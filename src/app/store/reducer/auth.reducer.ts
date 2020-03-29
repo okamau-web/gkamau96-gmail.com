@@ -1,5 +1,4 @@
 import { LogUser } from './../../model/login-user';
-import { Action } from '@ngrx/store';
 
 import {AuthActions , AuthActionTypes } from '../actions/auth.actions';
 
