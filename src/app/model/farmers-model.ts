@@ -1,5 +1,6 @@
 export interface Farmer {
   id?:number;
+  identification:string;
   name:string;
   phone:string;
   dateOfBirth:string;
@@ -10,5 +11,8 @@ export interface Farmer {
   subCounty:string;
   county:string;
   landOwnership:string;
+  educationLevel:string;
+  landNumber:string;
+  email:string;
 
 }

@@ -4,11 +4,15 @@
     <thead>
       <tr class="table-primary">
         <th scope="col">Names</th>
+        <th scope="col">ID no.</th>
         <th scope="col">B.Date</th>
         <th scope="col">Gender</th>
         <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Education</th>
         <th scope="col">Location</th>
         <th scope="col">Land Size</th>
+        <th scope="col">Land No.</th>
         <th scope="col">Ownership</th>
         <th scope="col">Ward</th>
         <th scope="col">Sub County</th>
@@ -19,14 +23,19 @@
       <tr></tr>
       <tr *ngFor="let farmer of farmers$ | async">
         <th>{{ farmer.name }}</th>
+        <td>{{ farmer.identification}}</td>
         <td>{{ farmer.dateOfBirth }}</td>
         <td>{{ farmer.gender}}</td>
         <td>{{ farmer.phone }}</td>
+        <td>{{ farmer.email}}</td>
+        <td>{{ farmer.educationLevel}}</td>
         <td>{{ farmer.geoLocation }}</td>
         <td>{{ farmer.sizeOfFarm }}</td>
+        <td>{{ farmer.landNumber}}</td>
         <td>{{ farmer.landOwnership }}</td>
         <td>{{ farmer.ward}}</td>
         <td>{{ farmer.subCounty}}</td>
+
         <th>
           <span>
             <a (click)="editFarmer(farmer)">edit</a>

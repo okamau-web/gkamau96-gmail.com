@@ -4,6 +4,7 @@ import { Farmer } from '../model/farmers-model';
 import { Observable } from 'rxjs';
 
 @Injectable({
+
   providedIn: 'root'
 })
 export class FarmersService {

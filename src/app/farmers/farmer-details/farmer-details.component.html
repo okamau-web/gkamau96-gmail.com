@@ -1,10 +1,10 @@
-<div class="container-fluid ">
+<div class="container-fluid">
   <h3>Farmer Enrollment Form</h3>
 </div>
 <form #farmerForm="ngForm" (ngSubmit)="addFarmer()" novalidate>
   <div class="row">
     <div class="col-sm-4">
-      <label>Names</label>
+      <label>Full Name</label>
       <input
         type="text"
         required
@@ -15,7 +15,25 @@
         [(ngModel)]="newFarmer.name"
       />
       <small class="text-danger" [class.d-none]="name.valid || name.untouched"
-        >Property name is required</small
+        >Farmer name is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>ID/Passport Number</label>
+      <input
+        type="text"
+        required
+        #identification="ngModel"
+        [class.is-invalid]="identification.invalid && identification.touched"
+        class="form-control"
+        name="identification"
+        [(ngModel)]="newFarmer.identification"
+      />
+      <small
+        class="text-danger"
+        [class.d-none]="identification.valid || identification.untouched"
+        >Farmer ID number is required</small
       >
     </div>
 
@@ -31,7 +49,23 @@
         [(ngModel)]="newFarmer.phone"
       />
       <small class="text-danger" [class.d-none]="phone.valid || phone.untouched"
-        >Property phone is required</small
+        >Farmer phone number is required</small
+      >
+    </div>
+
+    <div class="col-sm-4">
+      <label>Email</label>
+      <input
+        type="email"
+        required
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        class="form-control"
+        name="email"
+        [(ngModel)]="newFarmer.email"
+      />
+      <small class="text-danger" [class.d-none]="phone.valid || phone.untouched"
+        >Farmer email number is required</small
       >
     </div>
 
@@ -53,6 +87,26 @@
       >
     </div>
 
+    <div class="col-sm-4">
+      <label>Education Level</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="educationLevel"
+        required
+        #educationLevel="ngModel"
+        [(ngModel)]="newFarmer.educationLevel"
+      >
+        <option selected></option>
+        <option *ngFor="let level of education">{{ level }}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="educationLevel.valid || educationLevel.untouched"
+        >Education level is required</small
+      >
+    </div>
+
     <div class="col-md-4">
       <label for="inputState">Gender</label>
       <select
@@ -64,7 +118,7 @@
         [(ngModel)]="newFarmer.gender"
       >
         <option selected></option>
-        <option *ngFor="let type of genders">{{type}}</option>
+        <option *ngFor="let type of genders">{{ type }}</option>
       </select>
       <small
         class="text-danger"
@@ -110,26 +164,43 @@
       >
     </div>
 
-    <div class="col-md-4">
-      <label for="inputState">Ward</label>
-      <select
-        id="inputState"
-        class="form-control"
-        name="ward"
+    <div class="col-sm-4">
+      <label>Land Number</label>
+      <input
+        type="text"
         required
-        #ward="ngModel"
-        [(ngModel)]="newFarmer.ward"
-      >
-        <option selected></option>
-        <option *ngFor="let ward of wards">{{ ward }}</option>
-      </select>
+        #landNumber="ngModel"
+        [class.is-invalid]="landNumber.invalid && landNumber.touched"
+        class="form-control"
+        name="landNumber"
+        [(ngModel)]="newFarmer.landNumber"
+      />
       <small
         class="text-danger"
-        [class.d-none]="ward.valid || ward.untouched"
-        >Ward is required</small
+        [class.d-none]="landNumber.valid || landNumber.untouched"
+        >Farmer land number is required</small
       >
     </div>
 
+    <div class="col-md-4">
+      <label for="inputState">County</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="county"
+        required
+        #county="ngModel"
+        [(ngModel)]="newFarmer.county"
+      >
+        <option selected></option>
+        <option *ngFor="let county of counties">{{ county }}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="county.valid || county.untouched"
+        >Property sub county type is required</small
+      >
+    </div>
 
     <div class="col-md-4">
       <label for="inputState">Sub County</label>
@@ -147,27 +218,49 @@
       <small
         class="text-danger"
         [class.d-none]="subCounty.valid || subCounty.untouched"
-        >Property sub county type is required</small
+        >Sub county type is required</small
       >
     </div>
 
-    <div class="col-sm-4">
-      <label>County</label>
-      <input
-        type="text"
-        required
-        #county="ngModel"
-        [class.is-invalid]="county.invalid && county.touched"
+    <div class="col-md-4">
+      <label for="inputState">Ward</label>
+      <select
+        id="inputState"
         class="form-control"
-        name="county"
-        [(ngModel)]="newFarmer.county"
-      />
-      <small
-        class="text-danger"
-        [class.d-none]="county.valid || county.untouched"
-        >County is required</small
+        name="ward"
+        required
+        #ward="ngModel"
+        [(ngModel)]="newFarmer.ward"
+      >
+        <option selected></option>
+        <option *ngFor="let ward of wards">{{ ward }}</option>
+      </select>
+      <small class="text-danger" [class.d-none]="ward.valid || ward.untouched"
+        >Ward is required</small
       >
     </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Ownership</label>
+      <select
+        id="inputState"
+        class="form-control"
+        name="landOwnership"
+        required
+        #landOwnership="ngModel"
+        [(ngModel)]="newFarmer.landOwnership"
+      >
+        <option selected></option>
+        <option *ngFor="let owner of lands">{{ owner }}</option>
+      </select>
+      <small
+        class="text-danger"
+        [class.d-none]="landOwnership.valid || landOwnership.untouched"
+      >
+        Ownership type is required</small
+      >
+    </div>
+
 
 
     <div class="col-md-4">
@@ -181,24 +274,21 @@
         [(ngModel)]="newFarmer.landOwnership"
       >
         <option selected></option>
-        <option *ngFor="let owner of lands">{{ owner}}</option>
+        <option *ngFor="let owner of lands">{{ owner }}</option>
       </select>
       <small
         class="text-danger"
         [class.d-none]="landOwnership.valid || landOwnership.untouched"
-        > Ownership type is required</small
+      >
+        Ownership type is required</small
       >
     </div>
-
-
-
-
 
     <div class="form-group row">
       <div class="col-sm-10">
         <button
           [disabled]="farmerForm.form.invalid"
-          class="btn btn-primary "
+          class="btn btn-primary"
           type="submit"
         >
           Submit

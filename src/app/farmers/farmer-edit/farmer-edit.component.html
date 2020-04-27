@@ -13,6 +13,16 @@
         formControlName="name"
       />
     </div>
+    <div class="col-sm-4">
+      <label>ID no.</label>
+      <input
+        type="number"
+        id="identification"
+        required
+        class="form-control"
+        formControlName="identification"
+      />
+    </div>
 
     <div class="col-sm-4">
       <label>Phone</label>
@@ -23,70 +33,6 @@
         class="form-control"
         formControlName="phone"
       />
-    </div>
-
-    <div class="col-sm-4">
-      <label>Birth Date</label>
-      <input
-        type="date"
-        id="dateOfBirth"
-        required
-        class="form-control"
-        formControlName="dateOfBirth"
-
-      />
-    </div>
-
-    <div class="col-md-4">
-      <label for="inputState">Gender</label>
-      <select
-        type="text"
-        id="inputState"
-        required
-        class="form-control"
-         formControlName="gender"
-
-      >
-        <option selected></option>
-        <option *ngFor="let type of genders">{{ type }}</option>
-      </select>
-    </div>
-
-    <div class="col-sm-4">
-      <label>Geo Location</label>
-      <input
-        type="text"
-        id="geoLocation"
-        required
-        class="form-control"
-        formControlName="geoLocation"
-
-      />
-    </div>
-
-    <div class="col-sm-4">
-      <label>Farm Size</label>
-      <input
-        type="number"
-        id="sizeOfFarm"
-        required
-        class="form-control"
-        formControlName="sizeOfFarm"
-      />
-    </div>
-
-    <div class="col-md-4">
-      <label for="inputState">Ward</label>
-      <select
-        id="inputState"
-        class="form-control"
-        formControlName="ward"
-        required
-
-      >
-        <option selected></option>
-        <option *ngFor="let ward of wards">{{ ward }}</option>
-      </select>
     </div>
 
     <div class="col-md-4">
@@ -103,13 +49,110 @@
     </div>
 
     <div class="col-sm-4">
-      <label>County</label>
+      <label>email</label>
       <input
         type="text"
         required
         class="form-control"
-        formControlName="county"
+        formControlName="email"
       />
+    </div>
+
+    <div class="col-sm-4">
+      <label>Birth Date</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        required
+        class="form-control"
+        formControlName="dateOfBirth"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Eduction Level</label>
+      <select
+        id="inputState"
+        class="form-control"
+        formControlName="educationLevel"
+        required
+      >
+        <option selected></option>
+        <option *ngFor="let level of education">{{ level }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Gender</label>
+      <select
+        type="text"
+        id="inputState"
+        required
+        class="form-control"
+        formControlName="gender"
+      >
+        <option selected></option>
+        <option *ngFor="let type of genders">{{ type }}</option>
+      </select>
+    </div>
+
+    <div class="col-sm-4">
+      <label>Geo Location</label>
+      <input
+        type="text"
+        id="geoLocation"
+        required
+        class="form-control"
+        formControlName="geoLocation"
+      />
+    </div>
+
+    <div class="col-sm-4">
+      <label>Farm Size</label>
+      <input
+        type="number"
+        id="sizeOfFarm"
+        required
+        class="form-control"
+        formControlName="sizeOfFarm"
+      />
+    </div>
+
+    <div class="col-sm-4">
+      <label>Land Number</label>
+      <input
+        type="number"
+        id="landNumber"
+        required
+        class="form-control"
+        formControlName="landNumber"
+      />
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">Ward</label>
+      <select
+        id="inputState"
+        class="form-control"
+        formControlName="ward"
+        required
+      >
+        <option selected></option>
+        <option *ngFor="let ward of wards">{{ ward }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState">County</label>
+      <select
+        id="inputState"
+        class="form-control"
+        formControlName="county"
+        required
+      >
+        <option selected></option>
+        <option *ngFor="let county of counties">{{ county }}</option>
+      </select>
     </div>
 
     <div class="col-md-4">
@@ -124,7 +167,6 @@
         <option *ngFor="let owner of lands">{{ owner }}</option>
       </select>
     </div>
-
 
     <div class="form-group row">
       <div class="col-sm-10">

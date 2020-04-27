@@ -8,7 +8,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -60,7 +59,7 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FarmersService } from './farmers/farmers.service';
-
+import { ToastrModule} from 'ngx-toastr'
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,7 +94,11 @@ import { FarmersService } from './farmers/farmers.service';
     MatCheckboxModule,
     EffectsModule.forRoot([PropertyEffect]),
     StoreModule.forRoot({ properties: propertyReducer, auth: AuthReducer, }),
-
+    ToastrModule.forRoot({
+      timeOut: 1500,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyDyNGdUKaJu574UitqUo1RKX6ly6NlKKeM' }),
     MatCardModule,
 

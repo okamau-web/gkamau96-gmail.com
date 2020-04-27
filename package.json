@@ -36,7 +36,7 @@
     "leaflet": "1.6.0",
     "ng2-carouselamos": "^4.1.0",
     "ng2-charts": "^2.3.0",
-    "ngx-toastr": "^12.0.0",
+    "ngx-toastr": "^12.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

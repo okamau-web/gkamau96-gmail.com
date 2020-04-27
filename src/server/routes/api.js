@@ -5,15 +5,21 @@ const User = require("../model/user");
 const Property = require("../model/property")
 const mongoose = require("mongoose");
 
-const db =
-    "mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/test?retryWrites=true&w=majority";
-mongoose.connect(db, err => {
-    if (err) {
-        console.error("Not Connected" + err);
-    } else {
-        console.log("Connected to mongoDB");
-    }
-});
+//  const db =
+//   "mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/test?retryWrites=true&w=majority";
+//  mongoose.connect(db, err => {
+//     if (err) {
+//         console.error("Not Connected" + err);
+//     } else {
+//          console.log("Connected to mongoDB");
+//     }
+// } );
+
+mongoose.connect('mongodb://localhost/platform', {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+}) .then(() => 'You are now connected to Mongo!')
+.catch(err => console.error('Something went wrong', err))
+
 
 
 router.get("/", function(req, res) {
