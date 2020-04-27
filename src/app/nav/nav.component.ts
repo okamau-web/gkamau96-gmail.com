@@ -1,3 +1,4 @@
+import { LogUser } from './../model/login-user';
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
  title = 'POPOTE SOLUTIONS';
-
+user  =
+  {username:'kamaa',
+email:"kamau@kamaa"}
+;
   constructor(public authService: AuthService, ) { }
 
   ngOnInit() { }
